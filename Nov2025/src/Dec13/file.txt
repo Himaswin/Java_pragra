@@ -1,0 +1,27 @@
+recap
+do while
+for loop
+continue
+break
+-----------
+-- OOP
+why java is oop?
+blueprint - design to create, map, skeleton, basic structure
+class is a blueprint to create objects
+object ->instance of a class
+
+
+-- Data members/ variables/attributes
+new -- allocates memory in jvm
+
+
+behavior ->method/function
+
+cannot declare a method inside a method
+
+instance var - belongs to the class and any method in class can access it
+local var - limited scope and cannot be accessed outside its scope
+
+String[] args can accept any number of arguments of type string;
+
+arrays - storing variables of similar kind

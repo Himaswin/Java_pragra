@@ -1,0 +1,64 @@
+recap
+
+shell- interpretor for kernal
+kernel- heart of os which does tasks
+
+linux commands
+touch name  - create file
+ls - list files
+vi - open editor
+rmdir - remove directory
+rm - remove file
+mv file1 file2 - renames
+cp file1 file2 - copy contents to file2
+cat - view
+rm -r - remove when the dir is not empty
+cd change dir
+pwd - current
+
+permissions         memory      group of owner      size        Date            filename
+-rw-r--r--.         1           ec2-user            0           feb 15 09:21    file.txt
+
+
+owner-group-others
+drwxr-xr-x permissions for dir
+-rw-r--r-- permissions for file
+
+r-read, w-write, x-execute
+
+ls -a shows hidden files
+
+Absolute path -> complete path from root
+Relative -> current dir
+
+
+root@WINDELL-M8JIP9C:~/java_stuff# cat myfile.txt
+Hello this is class 2
+bllb:
+
+root@WINDELL-M8JIP9C:~/java_stuff# wc myfile.txt
+num of lines, num of words,  bytes, filename
+ 3  6 29 myfile.txt
+
+grep searchword infile - searches for searchword in infile
+
+sort file to sort in ascending
+sort -r sort in descending
+
+chmod 400 myfile - change the permissions for myfile to only read(400)
+        owner   group   other
+chmod   4       0       0
+
+
+0-no permission
+1- execute permission
+2-write permission
+4- read permission
+4+2+1 = 7 if we do chmod 777 everyone has all permissions
+
+chmod - change mode (permission)
+chmod -x file just adding the execution command
+
+
+shebang -> #!/bin/bash -> which interpreter to be used
+bash, zsh, bourneshell
