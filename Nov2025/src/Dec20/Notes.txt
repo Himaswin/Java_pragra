@@ -1,0 +1,34 @@
+constructor - default, parameterized
+
+Arrays
+single and multi dimensional
+multi - 2d, 3d, 4d...
+
+Matrix -> rows and columns
+[rows][columns]
+
+Use scanner to create 2d array and loop over matrix;
+
+-static
+reserve keyword (non-access modifier)
+static varible
+static method
+static block
+static class
+
+
+stack               heap -- memory types
+
+if var or method is static, we dont need to create an object to access it. we can access with the help of the class
+
+You cannot access no static var, method in a static context
+
+we dont need to call the static block it is the first statement to be executed
+
+instance block - simple block
+
+sequence of a call
+static -- it should be loaded in to the memory first
+instance
+methods
+
