@@ -1,0 +1,51 @@
+#recap
+String and ways to create a string
+Stringbuilder - buffer
+Inheritance
+
+string vs string builder vs string buffer
+StringBuilder is faster than stringBuffer because stringBuffer is thread safe i.e syncronized
+
+
+
+== compares memory reference
+.equals() compares content
+
+new-> heap
+Literal-> string constant pool
+why string is immutable? -> memory, string pool security, performace
+
+Inheritence
+we cannot inherit the constructor from other class
+we use constructor to initialize the class
+
+Object class is the parent class of all objects
+
+this refers to current object
+===========================================================
+
+Polymorphism
+many forms, many behaviours
+ability of the method to change based on requirements
+
+types of polymorphism
+compiletime, static polymorphism/loading, method overloading
+runtime, dynamic loading, method overriding
+
+
+
+Method overloading - same method name and different parameters
+
+static binding
+
+
+- Method Overriding-> own functionality, same method name different implementation
+give @Override for annotation
+using the method from main class and using it differently in current method
+At the run time and based on the object it will evaluate which method is called
+
+In method overriding, it always look first in the child then goes to parent class
+
+payment- credit, debit, cheque, upi
+employee- full-time, part-time
+Area-> square, rectangle, circle, triangle
