@@ -1,0 +1,15 @@
+## recap
+
+git branch name
+git checkout name to move to branch
+
+merge-> combining changes from one branch to another branch
+
+create a branch
+make changes
+move to the main branch
+to merge
+use git merge branch-to-be-merged
+
+
+// merge test
