@@ -1,0 +1,89 @@
+# recap
+
+-git
+-github
+-vcs
+-init, add,
+-git commit -m "" - snapshot of the code
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+
+Branch -> It is an independent line of development. it is a separate workplace created from existing code
+Develop new features, fix bugs, release safely without breaking the production
+
+
+
+Branching strategy
+
+you have a development branch
+if ticket is raised
+you need to create a branch
+fix the bug
+merge the branch to the developement branch
+
+when you finishe resolving the bug you need to do pr then
+someone verifies they approve the pr then code goes to branch
+if didnt approve then if there any comments make changes then pr again
+
+PR(pull request)
+
+regression testing is the new functionality working properly and not interupting existing code
+
+Back merge
+
+3 branching strategy
+main-> release-> develop-> branches(for features)
+
+Release Management
+
+Hotfix -> you have a bug product wants to be fixed asap
+you will create a hotfix branch from the main branch and fix the bug and then merge
+the same changes to release as well as develop branch and at the same time you will promote the changes to the prod.
+
+Hotfix branches from the main not the lower levels since the prod has main 
+
+
+git pull -> it is used to get the latest code from the remote to the local
+pull request -> it is used create a request to merge one branch to another. Review protected
+push-> to push your local branch change to the remote branch repo
+merge-> merge one branch to another
+merge conflict
+
+
+git branch -> to check the branches
+git brnach branchname -> to createa new branch with brachname
+git checkout -b branchname -> create a new branch with BranchName and chekout to that branch
+git branch -D branchname to delete the branch -> make sure to be outside of the branch which one is deleting
+
+git checkout branchname -> change to the branchname branch
+
+different env and 1 more branching strategy
+release management
+

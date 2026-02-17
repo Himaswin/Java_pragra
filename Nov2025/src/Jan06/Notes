@@ -45,7 +45,6 @@ using the method from main class and using it differently in current method
 At the run time and based on the object it will evaluate which method is called
 
 In method overriding, it always look first in the child then goes to parent class
-
 payment- credit, debit, cheque, upi
 employee- full-time, part-time
 Area-> square, rectangle, circle, triangle
