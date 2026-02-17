@@ -1,0 +1,80 @@
+2d arrays
+static -var, method, blocks
+stack - heap
+
+#this
+it refers to the current object
+
+
+#string
+sequence of characters
+non primitive data type
+stored in heap
+string constant pool
+
+if we have 2 variables to pointing the same string
+then in memory(heap) scp only one string exists
+
+properties
+strings are immutable (cannot be changed)
+string s = "abc";
+s = "bc"; now although s is changed but in scp abc still exists
+just the reference of s is changed to bc(new memory is created here )
+
+immutable because "abc" still exists in heap memory(scp)
+it will be used by other variables using the same value
+if no variable is used then it will be moved or removed by garbage collection (imp in java)
+
+methods in string
+length
+toLowerCase
+toUpperCase
+split
+substring
+concat
+charAt
+equals-> to check value
+== to check the reference i.e whether their memory is same
+trim to remove all the spaces before and after the string
+
+
+how to create a string
+String literal
+new keyword
+
+
+Stringbuilder - Stringbuffer
+These are mutable
+
+StringBuilder is non thread safe but fast
+StringBuffer is thread safe- slow
+
+String vs Stringbuffer vs string builder
+string is slowest among all -- very slow
+
+
+thread is smallest workable unit
+
+-OOPs
+Inheritance-> inherites properties(Attributes, methods) from another class
+Encapsulation-> Bundling of data and methods in a single unit
+Abstraction-> hiding the implementation details and showing necessary features only
+Polymorphism->many forms -> ability of a method to behave differently method overloading, method overriding
+
+
+
+Inheritance is used to reuse the code
+
+Employee-> parent class/super class
+ |
+ |extends
+Manager -> child class/sub class
+
+create a vehicle class create car or truck or bus class and inherit the properties
+
+
+Types of inheritance
+-single level inheritance
+-multi level inheritance
+-Hierichal
+-multiple[Not allowed in java]-> diamond problem
