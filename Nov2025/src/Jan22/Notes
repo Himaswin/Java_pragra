@@ -1,0 +1,53 @@
+Branch - is independant line of dev, separate workspace from main
+
+.gitignore
+-tells which files to ignore(not to track)
+-logs
+-build files
+-compiled code
+
+pr? to merge changes to another branch we make a pr then changes are approved by someone assigned
+
+clone
+pull vs fetch
+fetch-> download the changes only
+pull-> fetch + merge ( might cause merge conflit)
+
+what happens when the code is pushed to github?
+Deployment
+
+github ----------------------server--------------------www.abc.com
+
+
+jvm-> take care of memory and compilation
+javac -> compile the code
+
+
+platform independent? because of bytecode
+student.java------------java compiler(javac)------------>Student.class(bytecode)--------->JVM
+
+java is both compiled and interpreted
+
+Jdk-> java dev kit(jre+jvm)
+
+.jar-> java archive this is enough to execute all java classes
+
+Maven->automation build tools ->--used to convert java files to .jar
+
+.jar is deployed on any server but that server should have java on it
+
+CI/CD-> Continuos integration/Continuos deployment/develivery
+
+Jenkins-> CI/CD --> opensouce automation server used to implement CI/Cd pipelines
+
+CI-> Developers frequently integrate code in  to the shared repo.
+-code is pushed multiple times a day
+-automatic build triggered
+-automatic test runs
+
+CD-> code is always in deployable state
+build+test+package
+manual approval for production
+
+jenkin file
+Every task is known as job in jenkins
