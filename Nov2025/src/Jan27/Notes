@@ -1,0 +1,65 @@
+-recap
+
+throw vs throws
+throw - actually throws exception
+throws - just declares and to be handled.
+
+generics?
+Type safety, No class cast exception at runtime
+
+
+Immutability-> An object whose state cannot be changed after creation
+String
+final class - immutable class
+ -need to have data members as final to make it completely final
+ - no setter methods
+
+
+Collection-> It is a framework to manipulate and store different types of objects
+It is set of interfaces and classes to store and manipulate group of objects
+Objects(wrapper classes), Generics
+
+throwable(parent)-> exception
+Interface -- contract that a class follows
+doesnt show implementation- tells what class must do not how it does
+
+                                Iterable-Interface
+                                    |
+                                Collection-Interface
+                                    |
+       List-Interface             Set-Interface                     Queue-Interface
+       ArrayList                  HashSet                              Deque, PriorityQueue
+        LinkedList, Stack         LinkedHashSet, TreeSet
+
+
+ArrayList-> it is dynamic nature, size can be changed automatically
+
+Java 7
+by default list of 10 size will be created
+100% capacity then it will grow to 16
+n+ n/2 + 1 = 10+5+1 = 16 it grows using this formula
+
+Java 8
+Initially the size is 0
+- then automatically grows to 10
+-just to avoid memory waste
+
+-> arrayList is continuoes memory location - first at loc 12, next would be at 13, 14 ....
+- this makes search operation faster
+array has length
+arraylist -> size and capacity
+by default value for wrapper -> Integer - Null
+for int its 0;
+
+
+Manipulation in arraylist is costly, adding and removing element frequently.
+-costs memory and time
+1 million elements
+10, 23, 33, 45 .........
+adding at 2nd index everythng from 3rd element should be moved back
+
+100 elements to be stored .... array or arraylist(array is faster)
+
+Loop over collections
+Iterator-> object which is used to iterate over the element of collections
+

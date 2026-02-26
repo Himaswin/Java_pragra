@@ -4,3 +4,10 @@
 - type of exceptions (interview)
 -checked exception(compile time exception)-IoException, InterruptedException
 -unchecked exception(runtime exception)-> Artithmetic, NullPointeer
+
+- immutability(important)-jan27
+Immutability-> An object whose state cannot be changed after creation
+String
+final class - immutable class
+ -need to have data members as final to make it completely final
+ - no setter methods
