@@ -1,0 +1,85 @@
+-recap
+how to create an immutable class ? var private and final, class final, no setters
+
+Collection -  framework to manipulate and store group of objects
+
+arraylist is immutable? syncronized ? - mutable, not syncronized, not threadsafe
+stringbuffer threadsafe and syncronized
+
+
+we should not use arraylist for manipulation.
+search intensive(indexes) get(10)
+
+Time complexity
+BigO notation
+
+for manipulation use linkedlist
+LinkedList-> we store as nodes which store element and points to next node
+Tail stores the address of the next node
+head start node
+last node points to null
+
+Types -> singly linked list, doubly, circular
+-non continguos
+
+
+        arraylist       linkedlist
+search      O(1)           O(n)
+insert      O(n)            O(1)(at the head/tail, or when we know where to insert)
+
+why iterator when we have for loop
+concurrent modification exception
+
+There is something called modcount internally
+if we use iterator it stores and updates the mode count
+so we can add and remove
+without this using simple for loop doesnt change or update the modcount
+so it throws a concurrentModification excepiton
+
+
+Serialization
+serialization converts an objects state into a byte stream, allowing it to be reverted back into a copy of the object via deserialization
+-jvm independent
+-essential for cross-process persistence, trnasport
+-used for cached snapshot
+-sending message payloads
+-file storage
+
+core apis ObjectOutputStream - ObjectInputStream
+
+class A and class B
+class A implements serialize
+class B extends from class A
+since A is serialized all the properties are in B
+
+if i dont want to serizlization in B what to do?
+-> one make every vairable transient(transient variables cannot be serialized)
+-> writeObject and readObject from serialize can be changed with different exceptions
+
+Garbage collection
+-process of cleaning obj from the heap memory
+automatic in c, c++
+-developer can suggest to JVm to run GC
+-when there is no reference to an object
+
+why GC
+-prevents memory leaks
+-No manual memory management
+-Dynamic memory allocation
+-Better performance
+-Memory optimization
+
+When GC
+-runs automatically by JVM
+-occurs when the JVM detects low memory
+-Programmers cannot force it directly
+-Request can be made using System.gc()
+-Final decision will be taken by JVM
+
+-GC helps prevent memory leaks and OutOfMemoryError
+-MemoryLeak
+
+Memory areas
+Heap - Stack
+GC is based on heap since obj are stored in heaps
+
