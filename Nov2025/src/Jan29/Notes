@@ -1,0 +1,18 @@
+what prob ci/cd solves
+automation, faster release ,less manual work, early bug detection
+
+Cron job - schedule the rerun of the program
+used in jenkins to tell after how much time do you want to rerun or update changes
+
+
+Github push ------> Maven build ---------> Sonarqube test -----> deploy to dev -----> deploy to QA ------> deploy to prod
+
+RF -> roll forward, RB -> roll back
+CHG request - label(change request)
+labels are used when the deployment failed labels are used to identify the earlier versions and rolled back
+
+RM - release management
+PS - Production support
+devops
+
+
