@@ -1,0 +1,55 @@
+
+
+what is exception?-> disrupts the normal
+throwable is parent class of exception
+finally? -> always executed unless intentially exit the code
+
+5 keywords to handle exceptions -> try catch finally throw and throws
+
+throw -> when we want to throw an exception explicitly
+throws-> when you want to delegate the responsiblity of the exception handling to someone else.
+
+try catch should be where the program is executing not in the method itself
+
+custom exception must be an instance of throwable
+after throw, code stops
+
+try with resource - try with finally do the same thing
+
+you dont have to close the resource try(openfile/scanner/connection to db){}
+
+throw vs throws?
+final vs finalize?
+string vs stringbuilder vs stringbuffer
+
+collection -> framework to store and manipulate group of objects
+
+List            Set         Queue       Map
+ArrayList
+LinkedList
+- It provides various methods to work on
+collection works only with objects. no primitive data type can be used
+non-primitive - strings, classes, arrays
+
+wrapper class
+int ----> Integer
+double -------> Double
+float ----------> Float
+
+AutoBoxing -> primitive to wrapper
+Unboxing -> wrapper to primitive
+
+Type casting
+Widening casting -> smaller type to larger type ->byte--short--char--int--long--float--double
+Narrowing Casting -> larger type to smaller size type-> double--float--long--int--char--short--byte
+
+Java is type safe language
+js, python not type safe
+
+
+lombok -- reduce the boilerplate code
+
+
+
+
+
