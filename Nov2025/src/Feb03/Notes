@@ -1,0 +1,45 @@
+-Stack
+-It is ds which follow LIFO
+-push
+-pop
+-peek-> to see top most element
+
+stack is slower - because synchronized
+ArrayDeque instead of stack
+
+
+-Set
+-part of collection framework
+-no duplicates
+-order may or may not be maintained
+-There is no index
+
+-HashSet- no duplicates, does not maintain order
+-LinkedHashSet - LinkedList without no duplicates, maintain insertion order, slightly slower than hashset
+-TreeSet - no duplicates, maintain natural sorting order, no nulls
+
+hashcode(), equals() -> by default they compare obj memory instead of data
+calculate hashcode and if hashcode is same then it uses equals method to check whether the object is same or not
+
+== memory
+equals -> data check
+
+ConcurrentModificationException
+fail fast vs fail safe
+fail safe(slow bcoz of copy overhead) -> does not throw exception while iterating over it. copyOnwriteArraylist, copyOnwriteArraySet, concurrentHashmap
+fail fast(faster) -> Immediately throws exception if  collection is modified during iteration - ArrayList, LinkedList, HashSet, HashMap
+
+fail safe works on copy rather than the original collection
+
+iterator will never give you concurrentmodificationexception
+
+Big O notation
+                Add         Remove          Search
+Arraylist       O(1)        O(n)                 O(1)
+Linkedlist      O(1)        O(1)                 O(n)
+Hashset         O(1)        O(1)                 O(1)
+
+
+
+
+
