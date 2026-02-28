@@ -1,0 +1,51 @@
+how hashmap is created or stored
+--- Arraylist of linkedlist
+
+map.put()
+-generates the hashcode for the element to be put
+-calculate the index with modulo function
+- checks for the hashcode in teh index
+-if present checks for key
+--if same key then replaces value
+-- if diff key then add another node
+-if not present adds new node with key and value
+
+
+equals and hashcode contract should be overriden
+- if two hashcodes are equal then objects should be equal
+-it two objects are not equal they may/may not have same hashcodes
+-Hashcode should be consistent given obj does not change
+
+arraylist - not threadsafe use copyonwrite, copyonread
+
+
+Java 8
+-Functional interfaces
+-Lambdas
+-Stream API
+-Optional class
+-Date time API
+-Default methods in interface
+-:: operator
+
+--Interface -- contract which class has to full fill
+
+functional interface - interface which have only one abstract method SAM - single abstract method
+-can have static method concrete method(which has body)
+-can have variables - all variables are by default public static and final
+-It can have default method - which is for backward compatibility
+-No constructor
+-No object can be created
+so we need to create a class which implements this interface and use it
+since no constructor - no obj.
+
+If the class implements two interfaces which has same method- this is called dynamic problem
+
+If we want to use the method from an interface and dont want to create a class - we can do that by anonymous inner class
+to further make it easier we can just use lambda function
+
+
+
+---Lambda
+-It can be only of SAM
+-It is used to express the instance of the functional interface
