@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean name="gasolineEngine" class="co.pragra.learning.spring_first_project.modal.GasolineEngine">
+        <property name="tags">
+            <list>
+                <value>Hybrid</value>
+                <value>Clean</value>
+                <value>ev</value>
+                <value>jkdjf</value>
+
+            </list>
+        </property>
+    </bean>
+    <bean name="electricEngine" class="co.pragra.learning.spring_first_project.modal.ElectricEngine"></bean>
+    <bean name="car" init-method="init" destroy-method="destroy" class="co.pragra.learning.spring_first_project.modal.Car">
+        <constructor-arg name="make" value ="Honda"/>
+        <constructor-arg name="model" value="crv"/>
+        <constructor-arg name="engine" ref="gasolineEngine"/>
+    </bean>
+
+</beans>
