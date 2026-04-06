@@ -9,6 +9,10 @@ public class DatabaseConnection {
 
     @PostConstruct
     public void init(){
+        Car car  = new Car();
+        Car car1  = new Car();
+        System.out.println(car.toString());
+        System.out.println(car1.toString());
         System.out.println("init database");
     }
 
