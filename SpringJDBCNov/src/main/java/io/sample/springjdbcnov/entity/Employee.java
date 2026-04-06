@@ -8,14 +8,15 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Entity
-public class StudentEntity {
+public class Employee {
     @Id
-    int id;
-    String firstName;
-    String lastName;
+    private Long id;
+    private String name;
+    private String dept;
+    private Double salary;
 }
