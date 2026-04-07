@@ -16,7 +16,7 @@ public class JpaNovApplication {
 //        bean.saveProduct();
         bean.getAllProducts().forEach(System.out::println);
         bean.findProdByID(10L).ifPresent(System.out::println);
-        // save -> create and update two queries by hibernate
+        // save -> create and update  queries by hibernate
 
     }
 
