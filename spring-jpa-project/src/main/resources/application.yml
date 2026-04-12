@@ -1,0 +1,17 @@
+#spring.application.name=spring-jpa-project
+spring:
+  datasource:
+    url: jdbc:h2:./appdb
+    username: sa
+    password:
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+server:
+  port: 7000
+
