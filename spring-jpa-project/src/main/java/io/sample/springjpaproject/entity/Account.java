@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BankAccount {
+public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "account_sequence")
     @SequenceGenerator(name = "account_sequence", sequenceName = "account_seq",initialValue = 800000001, allocationSize = 1)
@@ -23,4 +23,5 @@ public class BankAccount {
     @ManyToOne
     @JoinColumn(name = "customer_id")
     private Customer customer;
+
 }
