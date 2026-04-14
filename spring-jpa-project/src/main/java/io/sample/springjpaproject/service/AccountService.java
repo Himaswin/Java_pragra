@@ -54,4 +54,16 @@ public class AccountService {
     public List<Account> fetchAccountsLessThanZero(){
         return accountRepo.findAllByBalanceIsLessThanEqual(0.0);
     }
+
+    public Optional<Account> findAccountById(Long accountId){
+        return accountRepo.findById(accountId);
+    }
+
+    public Account updateAccount(Account account) {
+        return accountRepo.save(account);
+    }
+
+    public List<Account> findMinMaxBalance(){
+        return accountRepo.accountsWithZeroToHundred(0.0, 100.0);
+    }
 }

@@ -1,6 +1,8 @@
 package io.sample.springjpaproject.service;
 
+import io.sample.springjpaproject.entity.Account;
 import io.sample.springjpaproject.entity.Customer;
+import io.sample.springjpaproject.repo.AccountRepo;
 import io.sample.springjpaproject.repo.CustomerRepo;
 import org.springframework.stereotype.Service;
 
@@ -11,9 +13,11 @@ import java.util.Optional;
 @Service
 public class CustomerService {
     private final CustomerRepo repo;
+    private final AccountRepo accountRepo;
 
-    public CustomerService(CustomerRepo repo){
+    public CustomerService(CustomerRepo repo, AccountRepo accountRepo){
         this.repo = repo;
+        this.accountRepo = accountRepo;
     }
 
     public Customer create(Customer customer) throws IllegalAccessException {
@@ -24,11 +28,16 @@ public class CustomerService {
             throw new IllegalArgumentException("Customer email cannot be null");
         }
         customer.setCreationDate(new Date());
+        List<Account> accounts = accountRepo.saveAll(customer.getAccounts());
+        customer.setAccounts(accounts);
         return repo.save(customer);
     }
 
     public List<Customer> getAll(){
-        return repo.findAll();
+
+        List<Customer> all = repo.findAll();
+        System.out.println("Now fetching all customers");
+        return all;
     }
 
     public Customer update(Customer customer){

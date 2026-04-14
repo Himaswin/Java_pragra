@@ -26,6 +26,7 @@ public class AccountAPI {
 
     @GetMapping("/api/customer/{id}/account")
     public List<Account> getAllAccounts(@PathVariable Integer id){
+        System.out.println(accountService.findMinMaxBalance());
         return accountService.fetchActiveChekingAccounts(id);
     }
 
