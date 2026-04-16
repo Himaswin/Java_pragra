@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: flyway-demo
+  profiles:
+    active: prod
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+      show-sql: true
+      format-sql: true
+
+  flyway:
+    enabled: true
+    callback-locations: classpath:db/migration
+    baseline-on-migrate: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+server:
+  port: 7000
