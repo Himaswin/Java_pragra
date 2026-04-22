@@ -1,0 +1,58 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <th:block th:replace="user/fragment :: header"></th:block>
+
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 th:text="${message}">Add User</h1>
+
+
+    <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
+        <table class="w-full text-sm text-left rtl:text-right text-body">
+            <thead class="text-sm text-body bg-neutral-secondary-soft border-b rounded-base border-default">
+            <tr>
+                <th scope="col" class="px-6 py-3 font-medium">
+                    Id
+                </th>
+                <th scope="col" class="px-6 py-3 font-medium">
+                    UserName
+                </th>
+                <th scope="col" class="px-6 py-3 font-medium">
+                    Password
+                </th>
+                <th scope="col" class="px-6 py-3 font-medium">
+                    Email
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user : ${users}" class="bg-neutral-primary border-b border-default">
+                <th th:text="${user.userId}" scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                    Apple MacBook Pro 17"
+                </th>
+                <td th:text="${user.username}" class="px-6 py-4">
+                    Silver
+                </td>
+                <td th:text="${user.password}" class="px-6 py-4">
+                    Laptop
+                </td>
+                <td th:text="${user.email}" class="px-6 py-4">
+                    $2999
+                </td>
+                <td class="px-6 py-4">
+                    231
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

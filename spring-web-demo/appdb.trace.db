@@ -1,0 +1,12 @@
+2026-04-21 21:05:24.991218-04:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TASKS" not found; SQL statement:
+select t1_0.user_id,t1_0.task_id,t1_0.created_at,t1_0.description,t1_0.due_date,t1_0.priority,t1_0.status,t1_0.title from tasks t1_0 where t1_0.user_id=? [42102-224]
+2026-04-21 21:05:48.747693-04:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TASKS" not found; SQL statement:
+select t1_0.user_id,t1_0.task_id,t1_0.created_at,t1_0.description,t1_0.due_date,t1_0.priority,t1_0.status,t1_0.title from tasks t1_0 where t1_0.user_id=? [42102-224]
+2026-04-21 21:08:00.951953-04:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TASKS" not found; SQL statement:
+select t1_0.user_id,t1_0.task_id,t1_0.created_at,t1_0.description,t1_0.due_date,t1_0.priority,t1_0.status,t1_0.title from tasks t1_0 where t1_0.user_id=? [42102-224]
+2026-04-21 21:08:03.192431-04:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TASKS" not found; SQL statement:
+select t1_0.user_id,t1_0.task_id,t1_0.created_at,t1_0.description,t1_0.due_date,t1_0.priority,t1_0.status,t1_0.title from tasks t1_0 where t1_0.user_id=? [42102-224]
