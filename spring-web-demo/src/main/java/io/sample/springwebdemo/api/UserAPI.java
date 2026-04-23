@@ -1,6 +1,7 @@
 package io.sample.springwebdemo.api;
 import io.sample.springwebdemo.Entity.Error;
 import io.sample.springwebdemo.Entity.User;
+import io.sample.springwebdemo.exception.UserNotFoundException;
 import io.sample.springwebdemo.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -97,8 +98,53 @@ public class UserAPI {
     })
     @io.swagger.v3.oas.annotations.parameters.RequestBody(description = "User object to be created", required = true,
     content = @Content(mediaType = "application/json", schema = @Schema(implementation = User.class)))
+
     public ResponseEntity<?> createUser(@RequestBody User user){
         User createdUser = userService.createUser(user);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdUser);
+    }
+
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200",
+            content = @Content(mediaType = "application/json",
+                    schema = @Schema(implementation = User.class)
+            )),
+            @ApiResponse(responseCode = "200",
+                            content = @Content(mediaType = "application/json",
+                                    schema = @Schema(implementation = User.class)
+            )),
+            @ApiResponse(responseCode = "404",
+                            content = @Content(mediaType = "application/json",
+                                    schema = @Schema(implementation = Error.class)
+            )),
+            @ApiResponse(responseCode = "400",
+                            content = @Content(
+                                    mediaType = "application/json",
+                                    schema = @Schema(implementation = User.class)
+            ))
+
+    })
+
+////    @GetMapping("/api/users/{id}")
+//    @RequestMapping(value = "/api/users/{id}", method = RequestMethod.GET, consumes = {"application/json", "application/xml"}, produces = "application/json")
+//    public ResponseEntity<?> getUserbyId(@PathVariable("id") Long userId){
+////        if(userId == null || userId < 0){
+////            throw new IllegalArgumentException("Invalid user id");
+////        }
+//       try{
+//           User userById = userService.getUserById(userId);
+//           return ResponseEntity.status(HttpStatus.OK).body(userById);
+//       } catch(UserNotFoundException e){
+//           return ResponseEntity.status(HttpStatus.NOT_FOUND).body(
+//                   Error.builder().code("not found 404").message(e.getMessage()).build()
+//           );
+//       }
+//    }
+// easier way and more cleaner
+    @RequestMapping(value = "/api/users/{id}", method = RequestMethod.GET, consumes = {"application/json", "application/xml"}, produces = "application/json")
+    public ResponseEntity<User> getUserbyId(@PathVariable("id") Long userId){
+
+        User user = userService.getUserById(userId);
+        return ResponseEntity.status(HttpStatus.OK).body(user);
     }
 }

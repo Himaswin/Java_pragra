@@ -1,11 +1,13 @@
 package io.sample.springwebdemo.service;
 
 import io.sample.springwebdemo.Entity.User;
+import io.sample.springwebdemo.exception.UserNotFoundException;
 import io.sample.springwebdemo.repo.UserRepo;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -23,5 +25,13 @@ public class UserService {
         return userRepo.findAll();
     }
 
+    public User getUserById(Long userId){
+        if(userId == null || userId < 0){
+            throw new IllegalArgumentException("Invalid user id");
+        }
+        Optional<User> byId = userRepo.findById(userId);
+        User user = byId.orElseThrow(() -> new UserNotFoundException("User not found with id: " + userId));
+        return user;
+    }
 
 }
