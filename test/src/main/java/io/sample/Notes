@@ -1,0 +1,10 @@
+Can we have private methods in interfaces?
+yes, after java 9
+
+what is a thread ?
+
+ways to create thread
+race condition
+deadlock
+
+volatile keyword in java
